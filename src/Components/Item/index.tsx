@@ -28,10 +28,10 @@ export const Item: React.FC<ItemData> = (props) => {
       <div className="w-full p-[10px] rounded-md bg-[#ffffff2d] mb-[10px] last:mb-[0px] grid grid-cols-[20px_1fr_90px_90px] items-center">
         <p className='w-full flex justify-center items-center text-slate-200 font-bold text-[.9em]'>x{props.data.item_amount}</p>
         <div className='w-full flex justify-start items-center'>
-          <h1 className='text-slate-200 text-[.9em] ml-[10px]'>{props.data.item_name}</h1>
+          <h1 className='text-slate-200 text-[.9em] ml-[10px]'>{limit_string(props.data.item_name, 16)}</h1>
         </div>
         <div className='w-full flex justify-end items-center'>
-          <p className='text-slate-200 font-bold'>{limit_string(props.data.item_price, 10)}</p>
+          <p className='text-slate-200 font-bold'>{props.data.item_price}</p>
         </div>
         <div className='flex justify-end items-center'>
           <button
