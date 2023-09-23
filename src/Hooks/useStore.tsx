@@ -95,7 +95,7 @@ export const useStore = (): StoreResolverType => {
 
       const current_data = JSON.parse(localStorage.getItem(sotore_key_name) as string) as StorageData;
 
-      handle_resolve_total_to_pay(current_data.items);
+      handle_resolve_total_to_pay(current_data?.items || []);
       set_items_list(current_data?.items || []);
 
       return current_data;
