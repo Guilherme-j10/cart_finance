@@ -31,7 +31,7 @@ export const Item: React.FC<ItemData> = (props) => {
           <h1 className='text-slate-200 text-[.9em] ml-[10px]'>{limit_string(props.data.item_name, 16)}</h1>
         </div>
         <div className='w-full flex justify-end items-center'>
-          <p className='text-slate-200 font-bold'>{props.data.item_price}</p>
+          <p className='text-slate-200 font-bold text-[.9em]'>{props.data.item_price}</p>
         </div>
         <div className='flex justify-end items-center'>
           <button
